@@ -1,0 +1,49 @@
+{
+  "name": "async-race",
+  "version": "1.0.0",
+  "description": "async race",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "npm run build && npx gh-pages -d dist -e async-race",
+    "start": "webpack serve --open --config ./webpack.config.js --env mode=dev",
+    "build": "webpack --config ./webpack.config.js --env mode=prod",
+    "lint": "eslint . --ext .ts",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/L1senochek/async-race.git"
+  },
+  "keywords": [
+    "async-race"
+  ],
+  "author": "L1senochek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/L1senochek/async-race/issues"
+  },
+  "homepage": "https://github.com/L1senochek/async-race#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.45.0",
+    "eslint-webpack-plugin": "^4.0.1",
+    "gh-pages": "^5.0.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "json-loader": "^0.5.7",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^5.0.0"
+  }
+}

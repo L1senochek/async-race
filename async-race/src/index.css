@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+/* //////////////////////// header */
+.header {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 3vw;
+}
+
+.logo__title {
+  padding: 0 2vw;
+}
+
+.logo__img {
+  background-image: url('./assets/svg/flags.svg');
+  width: 8vw;
+  height: 4.04vw;
+  background-size: cover;
+}
+
+
+
+.item__track {
+  display: flex;
+  justify-content: space-around;
+}

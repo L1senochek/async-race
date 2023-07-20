@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async race</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="nav">
+        <div class="nav__wrapper-to">
+          <button class="btn garage">TO GARAGE</button>
+          <button class="btn winners">TO WINNERS</button>
+        </div>
+        <div class="nav__wrapper-param-btn">
+          <form class="wrapper-param-btn">
+            <input type="text" class="param">
+            <input type="color" class="color">
+            <button class="btn create">CREATE</button>
+          </form>
+          <form class="wrapper-param-btn">
+            <input type="text" class="param">
+            <input type="color" class="color">
+            <button class="btn update">UPDATE</button>
+          </form>
+        </div>
+        <div class="nav__wrapper-status-car">
+          <button class="btn">RACE</button>
+          <button class="btn">RESET</button>
+          <button class="btn item_status">GENERATE CATS</button>
+        </div>
+      </div>
+      <div class="logo">
+        <h1 class="logo__title">ASYNC RACE</h1>
+        <div class="logo__img"></div>
+      </div>
+    </header>
+    <main class="main">
+      <h2 class="title">GARAGE (<span class="count-items">104</span>)</h2>
+      <h3 class="number-page">Page #<span class="count-page">1</span></h3>
+      <div class="item">
+        <div class="item__wrapper">
+          <div class="item__status">
+            <button class="item__btn">SELECT</button>
+            <button class="item__btn">REMOVE</button>
+            <h4 class="item__name">Catesla</h4>
+          </div>
+          <div class="item__road">
+            <div class="item__btn-wrapper">
+              <button class="item__btn">Start</button>
+              <button class="item__btn">Stop</button>
+            </div>
+            <div class="item__track">
+              <div class="item__img cat">cat</div>
+              <div class="item__img finish">finish</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
