@@ -4,9 +4,11 @@ export interface ElementParam {
   tag?: string;
   classNames: string[];
   innerText?: string;
-  callback?: Callback<Event> | null;
+  // callback?: Callback<Event>;
+  callback?: (event?: Event) => void;
   attributes?: {
     type: string;
-    placeholder: string;
+    placeholder?: string;
   };
+  href?: string;
 }

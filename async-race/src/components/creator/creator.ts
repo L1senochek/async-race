@@ -25,10 +25,22 @@ export default class CreatorElement {
     if (param.innerText !== undefined) {
       this.elem.innerText = param.innerText;
     }
+    if (param.callback) {
+      this.elem.addEventListener('click', param.callback);
+    }
     if (param.attributes) {
       const { type, placeholder } = param.attributes;
       this.elem.setAttribute('type', type);
-      this.elem.setAttribute('placeholder', placeholder);
+      if (placeholder) {
+        this.elem.setAttribute('placeholder', placeholder);
+      }
     }
+    if (this.elem instanceof HTMLAnchorElement && param.href) {
+      this.elem.href = param.href;
+    }
+  }
+
+  getValue(): string {
+    return this.elem instanceof HTMLInputElement ? this.elem.value : '';
   }
 }
