@@ -85,6 +85,7 @@ export class Item extends View {
     `;
   }
 }
+
 export class Finish extends View {
   constructor(param: ElementParam) {
     super(param);
@@ -95,7 +96,7 @@ export class Finish extends View {
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
      "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-     width="1280px" height="1136px" viewBox="0 0 1280.000000 1136.000000"
+     width="100px" height="88.75px" viewBox="0 0 1280.000000 1136.000000"
      preserveAspectRatio="xMidYMid meet" fill="none">
     <metadata>
     Created by potrace 1.15, written by Peter Selinger 2001-2017
@@ -171,6 +172,7 @@ export class Finish extends View {
     `;
   }
 }
+
 export class ItemTrack extends View {
   item!: Item;
   finish!: Finish;
@@ -181,7 +183,7 @@ export class ItemTrack extends View {
 
   private changeView(): void {
     this.item = new Item({ classNames: ['item__img', 'cat'] });
-    this.finish = new Finish({ tag: 'button', classNames: ['item__img', 'finish'] });
+    this.finish = new Finish({ classNames: ['item__img', 'finish'] });
 
     this.view.getElement().append(this.item.getHTMLElement(), this.finish.getHTMLElement());
   }

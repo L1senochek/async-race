@@ -4,7 +4,6 @@ export interface ElementParam {
   tag?: string;
   classNames: string[];
   innerText?: string;
-  // callback?: Callback<Event>;
   callback?: (event?: Event) => void;
   attributes?: {
     type: string;

@@ -52,4 +52,5 @@
 .item__track {
   display: flex;
   justify-content: space-around;
+  padding-right: 6vw;
 }

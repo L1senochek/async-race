@@ -1,6 +1,4 @@
-// import { ElementParam } from '../../types/creator/creator';
 import CreatorElement from '../creator/creator';
-// import { View } from '../creator/view';
 import { HeaderView } from './header/header';
 import { MainView } from './main/main';
 

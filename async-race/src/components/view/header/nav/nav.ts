@@ -1,5 +1,4 @@
 import { ElementParam } from '../../../../types/creator/creator';
-// import CreatorElement from '../../../creator/creator';
 import { View } from '../../../creator/view';
 import { NavItemParam } from './navItemParam/navItemParam';
 import { NavItemState } from './navItemState/navItemState';
