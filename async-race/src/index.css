@@ -51,6 +51,11 @@
 
 .item__track {
   display: flex;
-  justify-content: space-around;
-  padding-right: 6vw;
+  justify-content: space-between;
+  padding-right: 250px;
+  padding-left: 50px;
+}
+
+.item__wrapper {
+  border-bottom: 1px white dashed;
 }

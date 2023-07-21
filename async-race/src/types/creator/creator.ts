@@ -10,4 +10,5 @@ export interface ElementParam {
     placeholder?: string;
   };
   href?: string;
+  target?: string;
 }

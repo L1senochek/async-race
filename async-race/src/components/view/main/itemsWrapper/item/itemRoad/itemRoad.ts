@@ -102,7 +102,7 @@ export class Finish extends View {
     Created by potrace 1.15, written by Peter Selinger 2001-2017
     </metadata>
     <g transform="translate(0.000000,1136.000000) scale(0.100000,-0.100000)"
-    fill="#000000" stroke="none">
+    fill="#aaa" stroke="none">
     <path d="M5805 11350 c-233 -24 -496 -100 -710 -205 -367 -181 -673 -455
     -1415 -1270 -544 -597 -875 -908 -1195 -1120 -382 -255 -778 -369 -1165 -336
     -328 28 -648 116 -1010 279 -241 108 -310 131 -310 103 0 -42 629 -1428 2108

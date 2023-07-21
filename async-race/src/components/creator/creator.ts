@@ -37,6 +37,7 @@ export default class CreatorElement {
     }
     if (this.elem instanceof HTMLAnchorElement && param.href) {
       this.elem.href = param.href;
+      this.elem.target = '_blank';
     }
   }
 
