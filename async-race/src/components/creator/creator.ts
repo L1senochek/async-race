@@ -44,4 +44,8 @@ export default class CreatorElement {
   getValue(): string {
     return this.elem instanceof HTMLInputElement ? this.elem.value : '';
   }
+
+  replaceColorSvg(svg: string, newColor: string): string {
+    return svg.replace('fill="#aaa"', `fill="${newColor}"`);
+  }
 }

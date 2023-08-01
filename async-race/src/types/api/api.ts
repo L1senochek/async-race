@@ -1,13 +1,16 @@
-// Variables
-// const BASE = 'http://127.0.0.1:3000';
-// export const GARAGE = `${BASE}/garage`;
-// export const WINNERS = `${BASE}/winners`;
-// export const ENGINE = `${BASE}/engine`;
-// export const GARAGE_LIMIT = 7;
-// export const WINNERS_LIMIT = 10;
-export interface Item {
+export enum Path {
+  BASE = 'http://127.0.0.1:3000',
+  GARAGE = `${BASE}/garage`,
+  WINNERS = `${BASE}/winners`,
+  ENGINE = `${BASE}/engine`,
+}
+
+export interface CreateItem {
   name: string;
   color: string;
+}
+
+export interface Item extends CreateItem {
   id: number;
 }
 
@@ -16,21 +19,14 @@ export type ItemsResponse = {
   count: string | null;
 };
 
+export enum HeadersResponse {
+  X_TOTAL_COUNT = 'X-Total-Count',
+}
+
 export type EngineResponse = {
   distance: number;
   velocity: number;
 };
-
-export enum Path {
-  BASE = 'http://127.0.0.1:3000',
-  GARAGE = `${BASE}/garage`,
-  WINNERS = `${BASE}/winners`,
-  ENGINE = `${BASE}/engine`,
-}
-
-export enum HeadersResponse {
-  X_TOTAL_COUNT = 'X-Total-Count',
-}
 
 export interface EngineDriveModeResponse {
   success: true | false;
@@ -47,20 +43,38 @@ export interface Winners {
   data: Winner[];
 }
 
-export enum QueryParams {
-  STATUS_STARTED = 'started',
-  STATUS_STOPPED = 'stopped',
-  STATUS_DRIVE = 'drive',
+export enum QueryParamLimits {
   GARAGE_LIMIT = 7,
   WINNERS_LIMIT = 10,
 }
 
-export interface Sort {
-  sort: 'id' | 'wins' | 'time';
+export enum StatusEngineParam {
+  STATUS_STARTED = 'started',
+  STATUS_STOPPED = 'stopped',
+  STATUS_DRIVE = 'drive',
 }
 
-export interface Order {
-  order: 'ASC' | 'DESC';
+export enum Sort {
+  ID = 'id',
+  WINS = 'wins',
+  TIME = 'time',
+}
+
+export enum Order {
+  ASC = 'ASC',
+  DESC = 'DESC',
+}
+
+export enum HttpMetods {
+  GET = 'GET',
+  POST = 'POST',
+  DELETE = 'DELETE',
+  PUT = 'PUT',
+  PATCH = 'PATCH',
+  CONNECT = 'CONNECT',
+  HEAD = 'HEAD',
+  OPTIONS = 'OPTIONS',
+  TRACE = 'TRACE',
 }
 
 export enum HttpStatusCodes {
@@ -76,16 +90,4 @@ export enum HttpStatusCodes {
   TOO_MANY_REQUESTS = 429,
   INTERNAL_SERVER_ERROR = 500,
   TIME_OUT = 504,
-}
-
-export enum HttpMetods {
-  GET = 'GET',
-  POST = 'POST',
-  DELETE = 'DELETE',
-  PUT = 'PUT',
-  PATCH = 'PATCH',
-  CONNECT = 'CONNECT',
-  HEAD = 'HEAD',
-  OPTIONS = 'OPTIONS',
-  TRACE = 'TRACE',
 }

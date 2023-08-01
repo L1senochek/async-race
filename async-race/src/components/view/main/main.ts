@@ -1,30 +1,25 @@
 import { ElementParam } from '../../../types/creator/creator';
 import { View } from '../../creator/view';
-import { ItemsWrapperView } from './itemsWrapper/itemsWrapper';
-import { MainNumPageView } from './numberPage/numberPage';
-import { MainTitleView } from './title/title';
+import { WinnersView } from './winners/winners';
+import { GarageView } from './garage/garage';
+import { BannerView } from './banner/banner';
 
 export class MainView extends View {
-  mainTitleView!: MainTitleView;
-  mainNumPageView!: MainNumPageView;
-  ItemsWrapperView!: ItemsWrapperView;
-
+  garageView!: GarageView;
+  winnersView!: WinnersView;
+  banner!: BannerView;
   constructor(param: ElementParam) {
     super(param);
     this.changeView();
   }
 
   private changeView(): void {
-    this.mainTitleView = new MainTitleView({ tag: 'h2', classNames: ['title'] });
-    this.mainNumPageView = new MainNumPageView({ tag: 'h3', classNames: ['number-page'] });
-    this.ItemsWrapperView = new ItemsWrapperView({ classNames: ['items'] });
+    this.garageView = new GarageView();
+    this.winnersView = new WinnersView();
+    this.banner = new BannerView();
 
     this.view
       .getElement()
-      .prepend(
-        this.mainTitleView.getHTMLElement(),
-        this.mainNumPageView.getHTMLElement(),
-        this.ItemsWrapperView.getHTMLElement()
-      );
+      .prepend(this.garageView.getHTMLElement(), this.winnersView.getHTMLElement(), this.banner.getHTMLElement());
   }
 }

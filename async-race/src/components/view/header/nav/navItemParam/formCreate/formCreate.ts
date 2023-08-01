@@ -3,12 +3,12 @@ import { View } from '../../../../../creator/view';
 
 class CreateTextParam extends View {}
 class CreateColorparam extends View {}
-class CreateItem extends View {}
+class CreateItemBtn extends View {}
 
 export class FormCreate extends View {
   createTextParam!: CreateTextParam;
   createColorparam!: CreateColorparam;
-  createItem!: CreateItem;
+  createItemBtn!: CreateItemBtn;
   constructor(param: ElementParam) {
     super(param);
     this.changeView();
@@ -29,14 +29,14 @@ export class FormCreate extends View {
         type: 'color',
       },
     });
-    this.createItem = new CreateItem({ tag: 'button', classNames: ['btn', 'create'], innerText: 'CREATE' });
+    this.createItemBtn = new CreateItemBtn({ tag: 'button', classNames: ['btn', 'create'], innerText: 'CREATE' });
 
     this.view
       .getElement()
       .prepend(
         this.createTextParam.getHTMLElement(),
         this.createColorparam.getHTMLElement(),
-        this.createItem.getHTMLElement()
+        this.createItemBtn.getHTMLElement()
       );
   }
 }
