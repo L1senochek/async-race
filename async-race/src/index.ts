@@ -1,3 +1,5 @@
 import './index.css';
+import { App } from './components/app/app';
 
-console.log('test');
+const app = new App();
+app.start();

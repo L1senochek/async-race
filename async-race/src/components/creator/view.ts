@@ -33,4 +33,26 @@ export class View {
       }
     });
   }
+
+  setCallback(callback: (e?: Event) => void) {
+    this.view.getElement().addEventListener('click', callback);
+  }
+
+  clearWrapper() {
+    this.view.getElement().innerHTML = '';
+  }
+
+  getInputValue() {
+    if (this.view.elem instanceof HTMLInputElement) {
+      return this.view.elem.value;
+    }
+  }
+
+  getButtonElement(): HTMLButtonElement {
+    if (this.view.elem instanceof HTMLButtonElement) {
+      return this.view.elem;
+    } else {
+      throw new Error('is not btn');
+    }
+  }
 }
